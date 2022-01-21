@@ -11,8 +11,6 @@
 #define WRITE 1
 
 int main() {
-  char *const cmd[] ={"wc",NULL};
-  char *const cmd_2[] ={"ls", NULL};
   char *comando[] = {"./rand_file",NULL};
 
 
@@ -39,12 +37,10 @@ int main() {
         if(num<500)
         {
         printf("menor que 500 \n");
-        printf("%d\n",num);
         }
         else
         {
-        printf("mayor que  500\n");
-        printf("%d\n",num);
+        printf("mayor o igual que 500\n");
         }
         return 0;
   case -1:
