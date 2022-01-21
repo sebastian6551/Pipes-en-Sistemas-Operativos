@@ -41,7 +41,7 @@ int main() {
         close(fd[READ]);
         // Redirect STDOUT to write to the pipe.
         dup2(fd[WRITE], STDOUT_FILENO);
-        // Execute cat /etc/hosts
+        // Execute cat /etc/hosts 
         execvp(cmd2[0], cmd2);
   }
 }
