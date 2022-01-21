@@ -1,0 +1,15 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int Random(){
+       srand(time(NULL));
+       int r = rand() % 1000 + 1;
+       return r;
+}
+
+int main(int argc, char* argv[]) {
+  printf("%d\n",Random());
+  return 0;
+}
