@@ -28,7 +28,7 @@ int main() {
         close(fd[WRITE]);
         // Redirect STDIN to read from the pipe.
         dup2(fd[READ], STDIN_FILENO);
-        // Execute wc
+        // Execute sort
         execvp(cmd[0], cmd);
 
   case -1:
@@ -41,7 +41,7 @@ int main() {
         close(fd[READ]);
         // Redirect STDOUT to write to the pipe.
         dup2(fd[WRITE], STDOUT_FILENO);
-        // Execute ls -l
+        // Execute cat /etc/hosts
         execvp(cmd2[0], cmd2);
   }
 }
